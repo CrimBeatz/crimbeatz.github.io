@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>CrimsonBeatz</title>
+    <style>
+      body {
+            background-color: #000; /* Black background color */
+            margin: 0; /* Remove default body margin */
+            padding: 8px; /* Remove default body padding */
+        }
+
+      @font-face {
+        font-family: "Sen";
+        src: url("fonts/sen.woff") format('woff');
+      }
+      h2, h3 {
+        font-family: Sen
+      }
+      @font-face {
+        font-family: "Nunito";
+        src: url("fonts/nunito.woff") format('woff');
+      }
+      p {
+        font-family: Nunito
+      }
+      .header {
+        padding: 10px 16px;
+        background: #1f1f1f;
+        color: #ffffff
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+      .sticky + .content {
+        padding-top: 102px;
+      }
+    </style>
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("myHeader");
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky"); 
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <img src="images/icon.png"
+      <h3>CrimsonBeatz</h3>
+    </div>
+  </body>
+</html>
